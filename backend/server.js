@@ -9,7 +9,8 @@ dotenv.config();
 
 
 // Connecting Database
-connectToSupabse();
+const supabase = connectToSupabse();
+// console.log(supabase)
 
 const app= express()
 

@@ -89,6 +89,13 @@ Madadgar complements existing government helplines and NGO contacts for several 
 
 ## 📡 API Contracts
 
+#### Completed 
+- **POST** - `/api/v1/auth/signup` ✅
+  - Register a user with name, email and password
+- **POST** - `/api/v1/auth/login` ✅
+  - Sign in a user with email and password
+
+### In progress
 - **POST** - `/api/v1/reports`
   - Report a disaster with details like type, severity, and location.
 - **GET** - `/api/v1/reports`

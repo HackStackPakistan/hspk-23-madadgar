@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String   @id @default(uuid())
+  email           String   @unique
+  hashed_password String
+  name            String?
+  is_verified     Boolean  @default(false)
+  is_NGO          Boolean  @default(false)
+  role            Role     @default(VOLUNTEER)
+  created_at      DateTime @default(now())
+  updated_at      DateTime @default(now())
+  Report          Report[]
+
+  @@map("users")
+}
+
+model Report {
+  id            String        @id @default(uuid())
+  user          User          @relation(fields: [userId], references: [id])
+  userId        String
+  title         String
+  description   String
+  city          String
+  country       String
+  disasterType  DisasterType
+  longitude     Float
+  latitude      Float
+  authorized_by String?
+  resources     Json?         @db.Json
+  mediaUrl      String
+  severity      SeverityIndex
+  created_at    DateTime      @default(now())
+  updated_at    DateTime      @default(now())
+  Pledge        Pledge[]
+
+  @@map("reports")
+}
+
+model Pledge {
+  id                  String @id @default(uuid())
+  report              Report @relation(fields: [reportId], references: [id])
+  reportId            String
+  status              Status @default(PENDING)
+  available_resources Json?  @db.Json
+
+  @@map("pledges")
+}
+
+
+enum Role {
+  ADMIN
+  NGO
+  VOLUNTEER
+}
+
+enum DisasterType {
+  FLOOD
+  TSUNAMI
+  EARTHQUAKE
+  WILDFIRE
+  HURRICANE
+  TYPHOON
+}
+
+enum SeverityIndex {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum Status {
+  PENDING
+  APPROVED
+}

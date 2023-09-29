@@ -2,15 +2,12 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import morgan from 'morgan'
-import {connectToSupabse} from './config/db.js'
 
 dotenv.config();
 //importing routes
-
+import authRouter from './routes/auth/authRoutes.js'
 
 // Connecting Database
-const supabase = connectToSupabse();
-// console.log(supabase)
 
 const app= express()
 
@@ -21,6 +18,8 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json());
 // enables cors
 app.use(cors());
+
+app.use("/api/auth",authRouter)
 
 const PORT = process.env.PORT || 3000;
 

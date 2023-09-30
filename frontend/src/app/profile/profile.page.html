@@ -1,0 +1,46 @@
+<!-- profile.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding profile-page">
+  <!-- User Profile Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar>
+          <img alt="" [src]="userProfilePictureUrl" />
+        </ion-avatar>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-card-title>{{ userName }}</ion-card-title>
+            </ion-col>
+            <ion-col *ngIf="isNgo">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-card-subtitle>
+        <ion-icon name="mail-outline"></ion-icon>&nbsp;{{userEmail}} -
+        <ion-icon name="call-outline"></ion-icon>&nbsp;{{ userPhoneNumber }}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <!-- Tabs and Scrollable Lists -->
+  <ion-toolbar>
+    <ion-segment value="reports">
+      <ion-segment-button value="reports">
+        <ion-label>Your Reports</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-content>
+      <ion-list *ngFor="let report of reports">
+        <ion-item></ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-toolbar>
+</ion-content>

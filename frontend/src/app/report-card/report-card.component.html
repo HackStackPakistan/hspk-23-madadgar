@@ -1,0 +1,16 @@
+<ion-card lines="none">
+  <img alt="" [src]="reportImageURL" />
+  <ion-card-header>
+    <ion-item lines="none">
+      <ion-card-title>
+        {{ reportTitle }}
+        <ion-text color="secondary">
+          <sub>{{ timeSinceReport }}</sub>
+        </ion-text>
+      </ion-card-title>
+      <ion-chip slot="end" class="report-severity-chip" [color]="reportSeverity === 'HIGH' ? 'danger' : reportSeverity === 'MEDIUM' ? 'warning' : 'tertiary'">
+        <ion-icon class="severity-icon" name="alert-outline"></ion-icon>
+      </ion-chip>
+    </ion-item>
+  </ion-card-header>
+</ion-card>

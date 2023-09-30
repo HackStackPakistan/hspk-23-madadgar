@@ -1,0 +1,11 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Reports</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let report of reports">
+    <app-report-card [report]="report" [reportImageURL]="report.imageURL" [reportTitle]="report.title" [reportSeverity]="report.severity" [timeSinceReport]="report.timeSince"></app-report-card>
+  </ion-list>
+</ion-content>

@@ -9,7 +9,7 @@ Madadgar is a revolutionary mobile-first progressive web application that puts t
 Join us in making a difference when it matters most! 🌍
 
 ## 📖 Table of Contents
-
+- [Setup and Run Project](#setup-and-run-project)
 - [Introduction](#introduction)
 - [User Demographic](#user-demographic)
 - [Key Features](#key-features)
@@ -18,6 +18,12 @@ Join us in making a difference when it matters most! 🌍
 - [API Contracts](#api-contracts)
 - [Contributing](#contributing)
 - [License](#license)
+
+## 🌟 Setup and Run Project
+
+git clone the repositry
+docker build -f Dockerfile.backend -t backendimage . 
+docker run backendimage
 
 ## 🌟 Introduction
 

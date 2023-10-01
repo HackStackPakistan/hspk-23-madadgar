@@ -30,6 +30,10 @@ Join us in making a difference when it matters most! 🌍
 - docker build -f Dockerfile.backend -t backendimage . 
 - docker run backendimage
 
+You can call our backend endpoints from here https://madadgar.up.railway.app
+Signup: https://madadgar.up.railway.app/api/v1/auth/signup
+Signup: https://madadgar.up.railway.app/api/v1/auth/login
+
 ### Running Frontend
 - Go through this guide here [Frontend-setup](https://github.com/HackStackPakistan/hspk-23-madadgar/blob/main/frontend/README.md) to view our frontend
 

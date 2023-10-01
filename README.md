@@ -21,9 +21,10 @@ Join us in making a difference when it matters most! 🌍
 
 ## 🌟 Setup and Run Project
 
-git clone the repositry
-docker build -f Dockerfile.backend -t backendimage . 
-docker run backendimage
+- Visit [Wire Frames](https://www.figma.com/file/vEia4g9lEtuCwus9bboVys/MADADGAR-WIREFRAMES?type=design&node-id=151%3A0&mode=design&t=GYxbACcWXHna4CgQ-1) to view our frontend
+- git clone the repositry
+- docker build -f Dockerfile.backend -t backendimage . 
+- docker run backendimage
 
 ## 🌟 Introduction
 

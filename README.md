@@ -1,6 +1,6 @@
 #  Madadgar: Empowering Disaster Response 🚀
 
-## Status: Is the project completed? No, but did we try? YES 
+## 🟢 Status: Is the project completed? No, but did we try? YES 
 
 
 [Wire Frames](https://www.figma.com/file/vEia4g9lEtuCwus9bboVys/MADADGAR-WIREFRAMES?type=design&node-id=151%3A0&mode=design&t=GYxbACcWXHna4CgQ-1)

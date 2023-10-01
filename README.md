@@ -21,10 +21,15 @@ Join us in making a difference when it matters most! 🌍
 
 ## 🌟 Setup and Run Project
 
-- Visit [Wire Frames](https://www.figma.com/file/vEia4g9lEtuCwus9bboVys/MADADGAR-WIREFRAMES?type=design&node-id=151%3A0&mode=design&t=GYxbACcWXHna4CgQ-1) to view our frontend
-- git clone the repositry
+- Visit [Wire Frames](https://www.figma.com/file/vEia4g9lEtuCwus9bboVys/MADADGAR-WIREFRAMES?type=design&node-id=151%3A0&mode=design&t=GYxbACcWXHna4CgQ-1) to view our figma designs
+  
+### Running Backend
+- git clone the repository
 - docker build -f Dockerfile.backend -t backendimage . 
 - docker run backendimage
+
+### Running Frontend
+- Go through this guide here [Frontend-setup](https://github.com/HackStackPakistan/hspk-23-madadgar/blob/main/frontend/README.md) to view our frontend
 
 ## 🌟 Introduction
 
@@ -60,7 +65,6 @@ Madadgar is designed for a diverse range of users who share a common interest in
 ### 📈 Transparency and Accountability
 - Maintain a meticulous audit trail to ensure accountability and transparency.
 - Track the progress of your reports and see how resources are allocated.
-
 ### 🌟 User Engagement and Empowerment
 - Empower individuals to actively participate in disaster response efforts.
 - Foster a sense of community engagement and responsibility.
